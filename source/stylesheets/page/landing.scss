@@ -1,17 +1,22 @@
 @import 'bambora_ui_variables';
 @import '_site_primary_colors';
 
-body { 
-    background-color: $muted;
-}
-
 .hero {
     h1 {
         margin-bottom: 0;
-    } 
+    }
+
+    h1, h3, p {
+        text-align: center;
+    }
+    .row > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.hero-image { 
+.hero-image {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -20,26 +25,12 @@ body {
     margin-bottom: 60px;
 
     .row {
-        margin-top: 15vw; 
-        h1, p {
+        margin-top: 10vw;
+        h1, h3, p {
             color: $lightest;
         }
     }
 }
-
-.hero-image-gradient {
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom right, black, $primary-dark);
-        opacity: .7;         
-    }
-}
-
 
 body > .container {
     margin-top: 0;
@@ -47,17 +38,17 @@ body > .container {
 
 .hero-no-image .row {
     margin-top: 60px;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
     p {
         color: $contrast;
     }
 }
 
-.card-set { 
-    margin-top: 32px; 
+.card-set {
+    margin-top: 32px;
     hr {
-        margin-top: 0; 
-        background: $darkest; 
+        margin-top: 0;
+        background: $darkest;
     }
 }
 

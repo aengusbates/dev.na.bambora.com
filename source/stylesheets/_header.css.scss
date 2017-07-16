@@ -24,7 +24,7 @@
 
   path {
     fill: $lightest;
-  } 
+  }
 }
 
 nav { // transitions on landing page scroll
@@ -52,9 +52,9 @@ nav { // transitions on landing page scroll
 
 
 // Nav styling on small screen (i.e. links in nav too long)
-// Overrides Bambora UI media queries for nav, but those don't 
-// really work for the site. 
-@media (max-width: $header-break-width) {  
+// Overrides Bambora UI media queries for nav, but those don't
+// really work for the site.
+@media (max-width: $header-break-width) {
 
   .hamburger-icon {
     display: inline;
@@ -90,7 +90,7 @@ nav { // transitions on landing page scroll
           }
 
           a.active {
-            color: $lightest; 
+            color: $lightest;
           }
           .nav-icon {
             path {
@@ -99,7 +99,7 @@ nav { // transitions on landing page scroll
             &:hover {
               path {
                fill: $lightest;
-              }    
+              }
             }
           }
         }
@@ -133,7 +133,7 @@ nav { // transitions on landing page scroll
 
       path {
         fill: #9197a3;
-      } 
+      }
 
       .pull-left {
         float: none;
@@ -153,7 +153,7 @@ nav { // transitions on landing page scroll
           >a {
             float: none;
           }
-          
+
           > *:not(:first-child) {
               margin: 0;
           }
@@ -181,3 +181,23 @@ nav { // transitions on landing page scroll
   }
 }
 
+// Overriding Bambora UI default styling to align with Europrn dev portal.
+.header-content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .header-content-wrapper {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .header-content-wrapper {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-content-wrapper {
+    width: 1000px;
+  }
+}

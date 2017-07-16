@@ -8,13 +8,15 @@
 <nav class="nav-pane nav-fixed">
 <% end %>
 
-    <!-- Hamburger icon --> 
+<div class="header-content-wrapper">
+
+    <!-- Hamburger icon -->
     <a href="#" class="hamburger-icon"><%= svg :list %></a>
 
     <!-- Logo -->
     <div class="pull-left nav-links">
         <a href="<%= nav.logo.link %>" class="logo">
-            <%# set logo version based on hero image %> 
+            <%# set logo version based on hero image %>
             <% if current_page.data.hero_unit and current_page.data.hero_unit.hero_image %>
                 <%= image_tag nav.logo.light %>
             <% else %>
@@ -25,41 +27,28 @@
 
     <div class="header-contents">
 
-    <!-- Links --> 
-    <div class="pull-left nav-links">
-        <% nav.links and nav.links.each do |link| %>
-            <% if link.title == current_page.data.navigation.header_active %>
-                <a href="<%= link.file %>" class="active"><%= link.title %></a>
-            <% else %>
-                <a href="<%= link.file %>"><%= link.title %></a>
-            <% end %>
-        <% end %>
-    </div>
-
-    <!-- Search / buttons -->
-    <div class="pull-right">
-        
-        <span class="button-wrap">
-            <a id="search-button" href="#"><%= svg "search" %></a>
-        </span>
-
-        <% nav.buttons and nav.buttons.each do |btn| %>
-            <span class="button-wrap">
-                <% if not btn.secondary %> 
-                    <a href="<%= btn.file %>" class="btn btn-small" <% if btn.new_tab %> target="_blank" <% end %>>
-                        <%= btn.title %>
-                    </a>
-                <% else %> 
-                    <a href="<%= btn.file %>" class="btn btn-small btn-secondary" <% if btn.new_tab %> target="_blank" <% end %>>
-                        <%= btn.title %>
-                    </a>
+        <!-- Links -->
+        <div class="pull-left nav-links">
+            <% nav.links and nav.links.each do |link| %>
+                <% if link.title == current_page.data.navigation.header_active %>
+                    <a href="<%= link.file %>" class="active"><%= link.title %></a>
+                <% else %>
+                    <a href="<%= link.file %>"><%= link.title %></a>
                 <% end %>
+            <% end %>
+        </div>
+
+        <!-- Search / buttons -->
+        <div class="pull-right">
+
+            <span class="button-wrap">
+                <a id="search-button" href="#"><%= svg "search" %></a>
             </span>
-        <% end %>
 
-        <%= partial "layouts/region_switcher" %>
+            <%= partial "layouts/region_switcher" %>
+        </div>
+
     </div>
-
     </div>
 </nav>
 
