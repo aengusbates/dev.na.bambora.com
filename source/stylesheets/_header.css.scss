@@ -165,7 +165,7 @@ nav { // transitions on landing page scroll
           .button-wrap {
             display: block;
             padding-bottom: 15px;
-            text-align: center;
+            padding-left: 20px;
             margin-right: 0;
           }
       }
@@ -181,23 +181,23 @@ nav { // transitions on landing page scroll
   }
 }
 
-// Overriding Bambora UI default styling to align with Europrn dev portal.
-.header-content-wrapper {
+// Overriding Bambora UI default styling to align with European dev portal.
+.nav-pane > .content-wrapper, footer > .content-wrapper {
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 768px) {
-  .header-content-wrapper {
+  .nav-pane > .content-wrapper, footer > .content-wrapper {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .header-content-wrapper {
+  .nav-pane > .content-wrapper, footer > .content-wrapper {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .header-content-wrapper {
+  .nav-pane > .content-wrapper, footer > .content-wrapper {
     width: 1000px;
   }
 }
